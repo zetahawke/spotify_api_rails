@@ -1,0 +1,33 @@
+  <div class="container">
+    <div class="section center-content center-align">
+      <div class="row">
+        <div class="col s12">
+          <%= form_tag("/users", method: "post") do %>
+            <div class="row">
+              <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <%= text_field_tag(:username) %>
+                <label for="icon_prefix">Spotify Username</label>
+              </div>
+            </div>
+          <% end %>
+          <table>
+            <thead>
+              <tr>
+                  <th>Name</th>
+                  <th>followers</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @users.each do |user| %>
+                <tr>
+                  <td><%= user.username %></td>
+                  <td><%= user.follows %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
