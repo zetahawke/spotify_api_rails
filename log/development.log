@@ -659,3 +659,87 @@ Processing by UserController#index as HTML
 Completed 200 OK in 138ms (Views: 135.7ms | ActiveRecord: 1.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-04-06 19:11:52 -0300
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /home/michel/.rbenv/versions/2.3.0/lib/ruby/gems/2.3.0/gems/activerecord-5.0.2/lib/active_record/railtie.rb:113)
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UserController#index as HTML
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from index at /home/michel/Documentos/mvps/spotify_api_rails/app/controllers/user_controller.rb:3)
+  Rendering user/index.html.erb within layouts/application
+  [1m[36mUser Load (13.2ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" ORDER BY "users"."follows" DESC[0m
+  Rendered user/index.html.erb within layouts/application (346.1ms)
+Completed 200 OK in 625ms (Views: 593.6ms | ActiveRecord: 16.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-04-06 19:11:57 -0300
+Processing by UserController#register_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HclCzkDPEqW+lG7UvKhzb1JU5GWHERlHjypNDUoZWVmx7201VlsoH57Ypaf+saBz0kzGuXx3gcoUSokBUPPYdA==", "username"=>"zetahawke"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Michel Bryan Szinavel Reyes"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "users" ("username", "follows", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["username", "Michel Bryan Szinavel Reyes"], ["follows", 14], ["created_at", 2017-04-06 19:11:58 -0300], ["updated_at", 2017-04-06 19:11:58 -0300]]
+  [1m[35m (30.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 916ms (ActiveRecord: 33.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-06 19:11:58 -0300
+Processing by UserController#index as HTML
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from index at /home/michel/Documentos/mvps/spotify_api_rails/app/controllers/user_controller.rb:3)
+  Rendering user/index.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" ORDER BY "users"."follows" DESC[0m
+  Rendered user/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 125ms (Views: 121.2ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2017-04-06 19:12:02 -0300
+Processing by UserController#register_user as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iit97RWKf6fwy/ivXFd53Qd3XsTDnt3KvrYt8CWnbzAmDVIWAx5FHdCHM9weTqrBh298GDj4RUcl1un8P03uHQ==", "username"=>"zetahawke"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Michel Bryan Szinavel Reyes"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 893ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-06 19:12:03 -0300
+Processing by UserController#index as HTML
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from index at /home/michel/Documentos/mvps/spotify_api_rails/app/controllers/user_controller.rb:3)
+  Rendering user/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" ORDER BY "users"."follows" DESC[0m
+  Rendered user/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 107ms (Views: 104.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-06 19:12:28 -0300
+Processing by UserController#index as HTML
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from index at /home/michel/Documentos/mvps/spotify_api_rails/app/controllers/user_controller.rb:3)
+  Rendering user/index.html.erb within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" ORDER BY "users"."follows" DESC[0m
+  Rendered user/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 199ms (Views: 196.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-06 19:13:00 -0300
+Processing by UserController#index as HTML
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from index at /home/michel/Documentos/mvps/spotify_api_rails/app/controllers/user_controller.rb:3)
+  Rendering user/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" ORDER BY "users"."follows" DESC[0m
+  Rendered user/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 142ms (Views: 140.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-06 19:13:10 -0300
+Processing by UserController#index as HTML
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from index at /home/michel/Documentos/mvps/spotify_api_rails/app/controllers/user_controller.rb:3)
+  Rendering user/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" ORDER BY "users"."follows" DESC[0m
+  Rendered user/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 88ms (Views: 86.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-06 19:13:28 -0300
+Processing by UserController#index as HTML
+DEPRECATION WARNING: uniq is deprecated and will be removed from Rails 5.1 (use distinct instead) (called from index at /home/michel/Documentos/mvps/spotify_api_rails/app/controllers/user_controller.rb:3)
+  Rendering user/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT DISTINCT "users".* FROM "users" ORDER BY "users"."follows" DESC[0m
+  Rendered user/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 104ms (Views: 101.3ms | ActiveRecord: 0.7ms)
+
+

@@ -1,6 +1,6 @@
 class UserController < ApplicationController
   def index
-    @users = User.all.order(follows: :desc)
+    @users = User.all.uniq.order(follows: :desc)
   end
 
   def register_user

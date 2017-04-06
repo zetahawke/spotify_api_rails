@@ -2,16 +2,16 @@
     <div class="section center-align">
       <h3>Obtén el número de seguidores de los usuarios en spotify</h3>
       <p>Busca un perfil y obtén su identificador(ID) del a barra de tu navegador</p>
+      <%= image_tag asset_path('spotify.PNG'), style: 'width: 700px;'%>
       <hr>
       <br>
-      <%= image_tag asset_path('spotify.PNG'), style: 'width: 700px;'%>
     </div>
     <div class="section center-content center-align">
       <div class="row">
         <div class="col s12">
           <%= form_tag("/users", method: "post") do %>
             <div class="row">
-              <div class="input-field col s6">
+              <div class="input-field center-content" style="width: 300px;">
                 <i class="material-icons prefix">account_circle</i>
                 <%= text_field_tag(:username) %>
                 <label for="icon_prefix">Spotify Username</label>
